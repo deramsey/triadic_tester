@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Triadic Color Tester</title>
+    <style type="text/css" contenteditable>
+        :root{
+            --main-color: 0;
+            --compliment: calc(var(--main-color) + 120);
+            --triad: calc(var(--compliment) + 120)
+        }
+        head, style{
+            display: block;
+        }
+        body{
+            background-color: hsl(var(--main-color), 100%, 25%);
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        h1{
+            color: hsl(var(--compliment), 100%, 50%);
+            text-align: center;
+        }
+        main{
+            border-bottom: 20px solid hsl(var(--triad), 100%, 80%);
+            min-height: 600px;
+            margin: 0 auto;
+            width: 60vw;
+            background-color: white;
+            padding: 2em;
+        }
+    </style>
+</head>
+<body>
+    <main>
+    <h1>Hello world!</h1>
+    <p>Test triadic color palettes by editing the CSS above.</p>
+</main>
+</body>
+</html>
